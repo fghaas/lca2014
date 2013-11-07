@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Getting Started</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/hastexo.css" id="theme" />
+	  
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+      <section>
+	<section>
+	  <img class="with-heading" src="openstack-logo.svg"/>
+	  <h2>Kickstack</h2>
+	  <p>Rapid OpenStack Deployment with Puppet</p>
+	</section>
+	<section>
+	  <h2>Getting Started</h2>
+	  <ul>
+	    <li>Go to <a href="http://IPADDRESS/kickstack>">http://IPADDRESS/kickstack</a></li>
+	    <li>Or grab a USB key from Florian.</li>
+	    <li>Or approach the podium and get the image files on your own thumbdrive.</li>
+	    <li>Grab all the files &amp; start VirtualBox.</li>
+	  </ul>
+	</section>
+	<section>
+	  <ul>
+	    <li>Create <strong>3</strong> VirtualBox host-only networks.</li>
+	    <li>Create <strong>1</strong> instance of <code>puppet.ova</code>.</li>
+	    <li>Create <strong>3</strong> instances of <code>openstack.ova</code> named <code>alice</code>, <code>bob</code>, <code>charlie</code>.</li>
+	    <li>Re-initialize their MAC addresses.</li>
+	  </ul>
+	</section>
+	<section>
+	  <ul>
+	    <li>Log in as <code>root/openstack</code></li>
+	    <li>Run <code>/root/fixup-host <em>alice|bob|charlie</em></code></li>
+	    <li>Reboot.</li>
+	    <li>Ready to rock!</li>
+	  </ul>
+	</section>
+      </section>
+    </div>
+  </div>
+  
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  
+  <script>
+    
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'zoom', // default/cube/page/concave/zoom/linear/fade/none
+
+    autoSlide: 10000,
+    loop: true,
+    
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+	{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+	{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+	{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+	{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+});
+    
+  </script>
+  </body>
+</html>
