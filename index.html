@@ -6,10 +6,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      
+
     <link rel="stylesheet" href="css/reveal.css"/>
     <link rel="stylesheet" href="css/theme/hastexo.css" id="theme" />
-	  
+
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css" />
 
@@ -49,8 +49,6 @@
 	</section>
       </section>
 
-
-
       <section>
         <h2>OpenStack Architecture</h2>
 	<img class="with-heading" height="100%" src="openstack-arch-grizzly-v1-conceptual.svg" type="image/svg"/>
@@ -62,53 +60,53 @@
 	  <h2>OpenStack Node Roles</h2>
 	  <p>Logical, atomic, composable classes of nodes in an OpenStack cloud</p>
 	</section>
-	
+
 	<section>
 	  <h2>Infrastructure Node</h2>
 	  <p>Runs a <strong>database</strong> and a <strong>message
 	  queue</strong> server<br/>(by default, MySQL and RabbitMQ)</p>
 	</section>
-	
+
 	<section>
 	  <h2>Authentication Node</h2>
 	  <p>Runs the OpenStack <strong>Identity Service</strong> providing <strong>authentication</strong> and a <strong>service catalog</strong></p>
 	</section>
-	
+
 	<section>
 	  <h2>API Node</h2>
 	  <p>Provides <strong>ReSTful API endpoints</strong> to OpenStack services</p>
 	</section>
-	
+
 	<section>
 	  <h2>Controller Node</h2>
 	  <p>Provides <strong>scheduling</strong> and <strong>registration</strong> services internal to OpenStack</p>
 	</section>
-	
+
 	<section>
 	  <h2>Network Node</h2>
 	  <p>Provides <strong>network connectivity</strong> within the cloud and to public networks</p>
 	</section>
-	
+
 	<section>
 	  <h2>Compute Node</h2>
 	  <p>Hosts and runs <strong>virtual machines</strong> (guests)</p>
 	</section>
-	
+
 	<section>
 	  <h2>(Block) Storage Node</h2>
 	  <p>Provides <strong>persistent block storage</strong> to guests</p>
 	</section>
-	
+
 	<section>
 	  <h2>Dashboard Node</h2>
 	  <p>Provides a <strong>unified user interface</strong> to cloud administrators</p>
 	</section>
-	
+
 	<section>
 	  <h2>Metering Node</h2>
 	  <p>Collects <strong>metering data</strong> from a unified event stream</p>
 	</section>
-	
+
 	<section>
 	  <h2>Orchestration node</h2>
 	  <p>Runs an <strong>orchestration engine</strong> for complex guest workloads</p>
@@ -255,9 +253,9 @@ for (var i = 0; i < n; i++) {
 
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.min.js"></script>
-  
+
   <script>
-    
+
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
@@ -265,10 +263,10 @@ Reveal.initialize({
     progress: true,
     history: true,
     center: true,
-    
+
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
     transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
-    
+
     // Optional libraries used to extend on reveal.js
     dependencies: [
 	{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -279,7 +277,7 @@ Reveal.initialize({
 	{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
     ]
 });
-    
+
   </script>
   </body>
 </html>
