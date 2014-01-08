@@ -43,7 +43,12 @@
 	  <p><a href="https://twitter.com/hastexo"><code>@hastexo</code></a></p>
 	  <p><a href="http://academy.hastexo.com">http://academy.hastexo.com</a></p>
 	</section>
+	<section>
+	  <div class="qrcode" id="qrcode-googleplus" />
+	  <p class="small"><a href="https://plus.google.com/events/cum97g6is6f6ncqn3dktqajfolc" id="googleplus">https://plus.google.com/events/cum97g6is6f6ncqn3dktqajfolc</a></p>
+	</section>
       </section>
+
 
 
       <section>
@@ -224,6 +229,7 @@
 
   <script src="qrcode.js"></script>
   <script>
+
 function makeQRCode(src, dest) {
     var a = document.getElementById(src);
     var qr = new QRCode(dest, {
@@ -233,9 +239,10 @@ function makeQRCode(src, dest) {
 
     qr.makeCode(a.href)
 }
-
 makeQRCode("github", "qrcode-github")
 makeQRCode("web", "qrcode-web")
+makeQRCode("googleplus", "qrcode-googleplus")
+
   </script>
   
   <script src="lib/js/head.min.js"></script>
