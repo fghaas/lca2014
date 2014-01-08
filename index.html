@@ -13,6 +13,9 @@
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css" />
 
+    <!-- For JavaScript-generated QR codes -->
+    <link rel="stylesheet" href="qrcode.css" />
+
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
       document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
@@ -202,10 +205,12 @@
 	  <p><code>@hastexo</code></p>
 	</section>
 	<section>
-	  <h2>Slides</h2>
-	  <img class="with-heading" src="github-slides.svg"/>
-	  <p class="small"><a href="https://github.com/fghaas/openstacksummithk2013-kickstack" >https://github.com/fghaas/openstacksummithk2013-kickstack</a></p>
-	  <p><a href="http://creativecommons.org/licenses/by-sa/2.0/" ><img src="by-sa.svg" alt="CC-BY-SA 2.0" /></a></p>
+	  <div class="qrcode" id="qrcode-github" />
+	  <p class="small"><a href="http://github.com/fghaas/lca2014" id="github">http://github.com/fghaas/lca2014</a></p>
+	</section>
+	<section>
+	  <div class="qrcode" id="qrcode-web" />
+	  <p class="small"><a href="http://www.hastexo.com/lca2014" id="web">http://www.hastexo.com/lca2014</a></p>
 	</section>
       </section>
 
@@ -216,6 +221,22 @@
       </section>
     </div>
   </div>
+
+  <script src="qrcode.js"></script>
+  <script>
+function makeQRCode(src, dest) {
+    var a = document.getElementById(src);
+    var qr = new QRCode(dest, {
+	colorDark : "#000000",
+	colorLight : "rgba(255,255,255,0)",
+    });
+
+    qr.makeCode(a.href)
+}
+
+makeQRCode("github", "qrcode-github")
+makeQRCode("web", "qrcode-web")
+  </script>
   
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.min.js"></script>
