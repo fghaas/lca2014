@@ -1,4 +1,4 @@
-# Kickstack: Rapid OpenStack Deployment with Puppet
+# Rapid OpenStack Deployment for Novices and Experts Alike
 
 Tutorial presented at the linux.conf.au 2014, Perth, WA, January 2014
 
@@ -80,7 +80,3 @@ Repeat this process a second time, replacing both the hostname and the
 
 Finally, repeat it a third time, replacing both the hostname and the
 `fixup-host` argument with `charlie`.
-
-
-
-
