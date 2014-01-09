@@ -29,7 +29,7 @@ make sure you download and install the required packages.
 The setup requires a total of 3 **host-only** networks (by default,
 VirtualBox only installs one NAT network). On Linux and Mac, those
 networks will be called vboxnet0, vboxnet1 and vboxnet2. On Windows,
-they'll have a horribly long windozey.
+they'll have horribly long windozey names.
 
 For best results, you should configure your networks as follows:
 
